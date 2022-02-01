@@ -1,12 +1,20 @@
 <template>
-  <div v-html="message"></div>
+  <div>{{ total }}</div>
+  <input v-model="num1"/>
+  <input v-model="num2"/>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      message: '<span style="color:blue">Blue</span>'
+      num1: 0,
+      num2: 0,
+    }
+  },
+  computed: {
+    total() {
+      return parseInt(this.num1) + parseInt(this.num2)
     }
   }
 }
