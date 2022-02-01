@@ -1,20 +1,12 @@
 <template>
-  <ol>
-    <li v-for="(student, index) in students" :key="student.id">Index - [{{ index }}] {{ student.name }}</li>
-  </ol>
+  <div>Ini adalah parent component</div>
+  <child-component/>
 </template>
 
 <script>
+import ChildComponent from './components/ChildComponent.vue'
 export default {
-  data() {
-    return {
-      students: [
-        {id: 1, name: "Andre"},
-        {id: 2, name: "Matiew"},
-        {id: 3, name: "Leonel"},
-      ]
-    }
-  }
+  components:{ ChildComponent }
 }
 </script>
 
