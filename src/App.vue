@@ -1,15 +1,15 @@
 <template>
 <child>
-  <template v-slot:default>
-    <span>Ini adalah Judul</span>
+  <template v-slot:default="{ data }">
+    <span>Judul : {{ data }}</span>
   </template>
 
-    <template v-slot:slotDua>
-    <span>Ini adalah Kontent</span>
+    <template v-slot:content="{ data }">
+    <span>Konten : {{ data }}</span>
   </template>
 
-    <template v-slot:slotTiga>
-    <span>Ini adalah Footer</span>
+    <template v-slot:footer="{ data }">
+    <span>Footer : {{ data }} </span>
   </template>
 </child>
 
