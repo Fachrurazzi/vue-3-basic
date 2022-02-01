@@ -1,12 +1,8 @@
 <template>
-  <div>{{ message }}</div>
+<child>
+  <span>sisipan</span>
+</child>
 
-  <child 
-    :model-value="message" 
-    @update:model-value="message = $event"
-    />
-
-  <child v-model="message"/>
 </template>
 
 <script>
