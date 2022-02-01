@@ -1,6 +1,16 @@
 <template>
 <child>
-  <span>sisipan</span>
+  <template v-slot:default>
+    <span>Ini adalah Judul</span>
+  </template>
+
+    <template v-slot:slotDua>
+    <span>Ini adalah Kontent</span>
+  </template>
+
+    <template v-slot:slotTiga>
+    <span>Ini adalah Footer</span>
+  </template>
 </child>
 
 </template>
