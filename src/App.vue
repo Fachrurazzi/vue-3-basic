@@ -1,16 +1,23 @@
 <template>
-  <div>
-    {{ message }}
+  <div v-if="status">
+    Ini Tampilkan
   </div>
+  <button @click="toggleStatus">Toggle</button>
 
-  <input v-model="message"/>
+  <div v-if="status">True</div>
+  <div v-else>False</div>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      message: 'Hello'
+      status: false
+    }
+  },
+  methods: {
+    toggleStatus() {
+      this.status = !this.status
     }
   }
 }
