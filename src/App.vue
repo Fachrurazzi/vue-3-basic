@@ -1,17 +1,12 @@
 <template>
-  <pre>{{ $data }}</pre>
-  <button @click="onPress">Click Me</button>
+<teleport to="#target-teleport">
+<home />
+</teleport>
 </template>
 
 <script>
-import basicMixins from './mixins/basic'
-import mergeMixins from './mixins/merge'
+import Home from './components/Home.vue'
 export default {
-  mixins: [ basicMixins, mergeMixins ],
-  data(){
-    return {
-      name: 'Fachrurazzi'
-    }
-  }
+  components: { Home }
 }
 </script>
