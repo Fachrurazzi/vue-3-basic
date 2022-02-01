@@ -1,7 +1,9 @@
 <template>
   <div>Ini adalah parent component</div>
-  <child-component text="test123"/>
-  <child-component :text="message"/>
+  <child-component 
+    v-for="name in names" 
+    :text="name"
+  />
 </template>
 
 <script>
@@ -10,7 +12,7 @@ export default {
   components:{ ChildComponent },
   data() {
     return {
-      message: 'hallo world'
+      names: ['andi', 'anto', 'dono']
     }
   }
 }

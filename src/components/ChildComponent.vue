@@ -1,5 +1,4 @@
 <template>
-    <div>Ini adalah child component dasar</div>
     <div>{{ text }}</div>
 </template>
 
