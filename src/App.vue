@@ -1,19 +1,21 @@
 <template>
-  <child ref="childComponent" @child-click="onPress"/>
+  <div>{{ message }}</div>
 
-  <button @click="clickSaya">Button dari Parent</button>
+  <child 
+    :model-value="message" 
+    @update:model-value="message = $event"
+    />
+
+  <child v-model="message"/>
 </template>
 
 <script>
 import Child from "./components/ChildComponent.vue"
 export default {
   components: {Child},
-  methods: {
-    onPress(value) {
-      console.log(value)
-    },
-    clickSaya() {
-      this.$refs.childComponent.onClick();
+  data() {
+    return {
+      message: ''
     }
   }
 }
