@@ -1,23 +1,18 @@
 <template>
-  <div v-if="status">
-    Ini Tampilkan
-  </div>
-  <button @click="toggleStatus">Toggle</button>
-
-  <div v-if="status">True</div>
-  <div v-else>False</div>
+  <ol>
+    <li v-for="(student, index) in students" :key="student.id">Index - [{{ index }}] {{ student.name }}</li>
+  </ol>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      status: false
-    }
-  },
-  methods: {
-    toggleStatus() {
-      this.status = !this.status
+      students: [
+        {id: 1, name: "Andre"},
+        {id: 2, name: "Matiew"},
+        {id: 3, name: "Leonel"},
+      ]
     }
   }
 }
